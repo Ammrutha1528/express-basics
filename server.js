@@ -8,6 +8,7 @@ app.post("/products",(req,res)=>{
     products.push(newProduct);
     res.status(200).json({message:"Product created successfully",data:newProduct});
 });
+app.get("/", (req, res) => res.json({ message: "Express Basics API is live and healthy", status: "OK", docs: "/products" }));
 app.get("/products",(req,res)=>{
      res.status(200).json({message:"List of all products fetched successfully",data:products});
 });
